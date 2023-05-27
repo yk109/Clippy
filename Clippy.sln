@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32526.322
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clippy", "Clippy\Clippy.csproj", "{8BF2BB5F-1528-4731-826D-A59630B12D15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clippy.SDK", "Clippy.SDK\Clippy.SDK.csproj", "{EBF117F2-9D5E-41BE-96F8-C626586A68A5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Doc", "Doc", "{765D02BE-B25E-431E-9CA0-BF4420ADFC0E}"
+	ProjectSection(SolutionItems) = preProject
+		Clippy.xlsx = Clippy.xlsx
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8BF2BB5F-1528-4731-826D-A59630B12D15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BF2BB5F-1528-4731-826D-A59630B12D15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BF2BB5F-1528-4731-826D-A59630B12D15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BF2BB5F-1528-4731-826D-A59630B12D15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBF117F2-9D5E-41BE-96F8-C626586A68A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBF117F2-9D5E-41BE-96F8-C626586A68A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBF117F2-9D5E-41BE-96F8-C626586A68A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBF117F2-9D5E-41BE-96F8-C626586A68A5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A3F24323-9F6D-494F-B3D6-09EE36C09D8D}
+	EndGlobalSection
+EndGlobal
