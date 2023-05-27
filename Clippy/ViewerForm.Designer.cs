@@ -47,8 +47,13 @@
             this.btnSetting = new System.Windows.Forms.Button();
             this.pictureBox = new Clippy.MyPictureBox();
             this.btnEdit = new System.Windows.Forms.Button();
+            this.scMain = new System.Windows.Forms.SplitContainer();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRepository)).BeginInit();
             this.cmsRepository.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.scMain)).BeginInit();
+            this.scMain.Panel1.SuspendLayout();
+            this.scMain.Panel2.SuspendLayout();
+            this.scMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvRepository
@@ -58,8 +63,6 @@
             this.dgvRepository.AllowUserToOrderColumns = true;
             this.dgvRepository.AllowUserToResizeColumns = false;
             this.dgvRepository.AllowUserToResizeRows = false;
-            this.dgvRepository.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.dgvRepository.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRepository.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColNumber,
@@ -67,7 +70,8 @@
             this.ColImage,
             this.ColPath,
             this.ColHash});
-            this.dgvRepository.Location = new System.Drawing.Point(13, 41);
+            this.dgvRepository.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvRepository.Location = new System.Drawing.Point(0, 0);
             this.dgvRepository.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dgvRepository.MultiSelect = false;
             this.dgvRepository.Name = "dgvRepository";
@@ -191,14 +195,11 @@
             // 
             // pictureBox
             // 
-            this.pictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox.Location = new System.Drawing.Point(326, 41);
-            this.pictureBox.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox.Location = new System.Drawing.Point(0, 0);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(845, 583);
+            this.pictureBox.Size = new System.Drawing.Size(851, 583);
             this.pictureBox.TabIndex = 22;
             // 
             // btnEdit
@@ -211,19 +212,38 @@
             this.btnEdit.UseVisualStyleBackColor = true;
             this.btnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
             // 
+            // scMain
+            // 
+            this.scMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.scMain.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this.scMain.Location = new System.Drawing.Point(12, 41);
+            this.scMain.Name = "scMain";
+            // 
+            // scMain.Panel1
+            // 
+            this.scMain.Panel1.Controls.Add(this.dgvRepository);
+            // 
+            // scMain.Panel2
+            // 
+            this.scMain.Panel2.Controls.Add(this.pictureBox);
+            this.scMain.Size = new System.Drawing.Size(1160, 583);
+            this.scMain.SplitterDistance = 305;
+            this.scMain.TabIndex = 23;
+            // 
             // ViewerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 636);
+            this.Controls.Add(this.scMain);
             this.Controls.Add(this.btnEdit);
-            this.Controls.Add(this.pictureBox);
             this.Controls.Add(this.btnSetting);
             this.Controls.Add(this.btnExportExcel);
             this.Controls.Add(this.llOpenSaveDir);
             this.Controls.Add(this.lblMessage);
             this.Controls.Add(this.lblInformation);
-            this.Controls.Add(this.dgvRepository);
             this.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
@@ -236,6 +256,10 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ViewerForm_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRepository)).EndInit();
             this.cmsRepository.ResumeLayout(false);
+            this.scMain.Panel1.ResumeLayout(false);
+            this.scMain.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.scMain)).EndInit();
+            this.scMain.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -257,6 +281,7 @@
         private System.Windows.Forms.Button btnSetting;
         private MyPictureBox pictureBox;
         private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.SplitContainer scMain;
     }
 }
 

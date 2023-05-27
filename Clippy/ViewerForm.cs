@@ -15,6 +15,7 @@ namespace Clippy
     {
         private readonly SettingRepository _settingRepository;
         private readonly PictureRepository _pictureRepository;
+        private readonly int _defaultSplitterDistance;
 
         public ViewerForm(SettingRepository settingRepository, PictureRepository pictureRepository)
         {
@@ -24,6 +25,7 @@ namespace Clippy
 
             _settingRepository = settingRepository;
             _pictureRepository = pictureRepository;
+            _defaultSplitterDistance = scMain.SplitterDistance;
 
             // 初期表示
             DisplayPictures();
@@ -31,6 +33,9 @@ namespace Clippy
 
         private void ViewerForm_Shown(object sender, EventArgs e)
         {
+            // スプリット幅を初期化する
+            scMain.SplitterDistance = _defaultSplitterDistance;
+
             // 再起動後に ShowDialog すると最前面に出てこない問題の修正
             TopMost = true;
             TopMost = false;
